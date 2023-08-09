@@ -18,7 +18,7 @@ ngOnInit(): void{
   this.axiosService.request( 
     "GET",
     "/messages",
-    ()
+    {}
     ).then(
     (response) => this.data = response.data
   )
