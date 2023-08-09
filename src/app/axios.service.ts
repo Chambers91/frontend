@@ -7,7 +7,7 @@ import axios from 'axios';
 export class AxiosService {
 
   constructor() { 
-    axios.defaults.basurl = "localhost:8080"
+    axios.defaults.baseURL = "localhost:8080"
     axios.defaults.headers.post ["Content-type"] = "application/json"
   }
 

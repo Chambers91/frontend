@@ -8,5 +8,19 @@ import { AxiosService } from '../axios.service';
   styleUrls: ['./auth-content.component.css']
 })
 export class AuthContentComponent {
+data: string[] = [];
 
+constructor(private axiosService:AxiosService){}
+
+ngOnInit(): void{
+//declaring a Get request for the messages endpoint with no argument
+//response is stored in the data variable
+  this.axiosService.request( 
+    "GET",
+    "/messages",
+    ()
+    ).then(
+    (response) => this.data = response.data
+  )
+};
 }
