@@ -8,7 +8,9 @@ import { AxiosService } from '../axios.service';
   styleUrls: ['./auth-content.component.css']
 })
 export class AuthContentComponent {
-data: string[] = [];
+//variable created to retrieve the backend response
+  data: string[] = [];
+
 
 constructor(private axiosService:AxiosService){}
 
