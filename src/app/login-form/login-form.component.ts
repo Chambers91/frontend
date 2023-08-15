@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-login-form',
@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class LoginFormComponent {
 
-}
+  @Output() onSubmitLoginEvent = new EventEmitter();
+
+  login: string = "";
+  password: string = "";
+
+  onSubmitLogin(): void {
+  this.onSubmitLoginEvent.emit({"login": this.login, "password": this.password});
+    }
+  }
